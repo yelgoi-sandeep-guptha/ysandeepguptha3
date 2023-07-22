@@ -49,7 +49,7 @@ public class FinanceService {
 	}
 
 	public List<FinanceDto> findByCustomerNameContaining(String name) {
-		log.info("name : {} ", name);
+		log.info("customer name : {} ", name);
 		return financeRepository.findByCustomerNameContaining(name).stream()
 				.map(finance -> mapFinanceDtoFromFinance(finance)).collect(Collectors.toList());
 	}
